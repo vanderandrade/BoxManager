@@ -1,5 +1,4 @@
-﻿
-namespace BoxManager.Model
+﻿namespace BoxManager.Model
 {
     public class BasicId
     {

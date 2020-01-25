@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BoxManager.Model
 {
+    [Table("box")]
     public class Box : BasicId
     {
         public int? Dimension_Id { get; set; }

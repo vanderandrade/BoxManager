@@ -54,6 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BoxController\BoxController.cs" />
+    <Compile Include="Controller\BoxController\IBoxController.cs" />
+    <Compile Include="Controller\BoxDimensionController\BoxDimensionController.cs" />
+    <Compile Include="Controller\BoxDimensionController\IBoxDimensionController.cs" />
+    <Compile Include="Controller\IController.cs" />
+    <Compile Include="Controller\ItemController\IItemController.cs" />
+    <Compile Include="Controller\ItemController\ItemController.cs" />
+    <Compile Include="Controller\ItemToyController\IItemToyController.cs" />
+    <Compile Include="Controller\ItemToyController\ItemToyController.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +76,12 @@
     <Compile Include="Model\Item_Toy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BoxDimensionRepository\BoxDimensionRepository.cs" />
+    <Compile Include="Repository\BoxRepository\BoxRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\ItemRepository\ItemRepository.cs" />
+    <Compile Include="Repository\ItemToyRepository\ItemToyRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -90,5 +105,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
