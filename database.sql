@@ -51,11 +51,11 @@ create table item
 go
 create table item_toy
 (
-	[item_id] int identity (1, 1) not null,
+	[id] int identity (1, 1) not null,
 	[minimum_age] int null
 
-	primary key ([item_id]),
-	constraint fk_item_item_toy foreign key ([item_id]) references item([id]),
+	primary key ([id]),
+	constraint fk_item_item_toy foreign key ([id]) references item([id]),
 	constraint chk_age_over_zero check ([minimum_age] > 0)
 )
 
