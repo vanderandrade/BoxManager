@@ -39,4 +39,4 @@ And some good pratices, as variable nomenclature, use of Generics to evade code 
 
 * [Dapper](https://github.com/StackExchange/Dapper) - The (micro)ORM used
 * [Dapper.Contrib](https://github.com/StackExchange/Dapper/tree/master/Dapper.Contrib) - Used to make a more cleaner use of Dapper
-* [Nuget](https://rometools.github.io/rome/) - Dependency Management
+* [Nuget](https://www.nuget.org/) - Dependency Management
