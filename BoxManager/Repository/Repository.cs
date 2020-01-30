@@ -24,6 +24,16 @@ namespace BoxManager.Repository
                 return conexao.Get<T>(id);
         }
 
+        public void Delete (Id id)
+        {
+            T element = GetById(id);
+
+            if (element is null) return;
+
+            using (SqlConnection conn = new SqlConnection(_connection))
+                conn.Delete(element);
+        }
+
         public void Delete(T element)
         {
             using (SqlConnection conn = new SqlConnection(_connection))

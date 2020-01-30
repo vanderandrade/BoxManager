@@ -16,6 +16,7 @@ namespace BoxManager.Controller.ItemController
 
         public void Change(Item item) => _repository.Update(item);
         public void Delete(Item item) => _repository.Delete(item);
+        public void Delete(int Id) => _repository.Delete(Id);
         public Item GetById(int Id) => _repository.GetById(Id);
         public IEnumerable<Item> GetAll() => _repository.List();
         public void Insert(Item item) => _repository.Insert(item);

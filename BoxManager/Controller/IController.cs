@@ -9,5 +9,6 @@ namespace BoxManager.Controller
         void Change(T entity);
         void Insert(T entity);
         void Delete(T entity);
+        void Delete(int Id);
     }
 }

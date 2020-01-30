@@ -7,6 +7,7 @@ namespace BoxManager.Repository
         long Insert(T element);
         void Update(T element);
         void Delete(T element);
+        void Delete(Id id);
         T GetById(Id id);
         IEnumerable<T> List();
     }

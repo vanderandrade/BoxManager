@@ -12,6 +12,7 @@ namespace BoxManager.Controller.BoxController
 
         public void Change(Box box) => _repository.Update(box);
         public void Delete(Box box) => _repository.Delete(box);
+        public void Delete(int Id) => _repository.Delete(Id);
         public Box GetById(int Id) => _repository.GetById(Id);
         public IEnumerable<Box> GetAll() => _repository.List();
         public void Insert(Box box) => _repository.Insert(box);
