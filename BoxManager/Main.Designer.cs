@@ -107,8 +107,10 @@
             this.Dtg_Boxes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dtg_Boxes.Size = new System.Drawing.Size(513, 473);
             this.Dtg_Boxes.TabIndex = 3;
+            this.Dtg_Boxes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Boxes_CellDoubleClick);
             this.Dtg_Boxes.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Boxes_RowEnter);
             this.Dtg_Boxes.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dtg_Boxes_RowLeave);
+            this.Dtg_Boxes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Dtg_Boxes_KeyDown);
             // 
             // Lbl_Boxes
             // 
