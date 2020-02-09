@@ -1,6 +1,7 @@
 ﻿using BoxManager.Model;
 using BoxManager.Repository.BoxRepository;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BoxManager.Controller.BoxController
 {
@@ -16,6 +17,9 @@ namespace BoxManager.Controller.BoxController
         public Box GetById(int Id) => _repository.GetById(Id);
         public IEnumerable<Box> GetAll() => _repository.List();
         public void Insert(Box box) => _repository.Insert(box);
+
+        public IList<Item> GetAllItems(int Id) => _repository.GetAllItems(Id).ToList();
+        public IList<Item> GetAllItems(Box box) => _repository.GetAllItems(box.Id).ToList();
 
         public void CreateRandomBox()
         {

@@ -1,6 +1,7 @@
 ﻿using BoxManager.Controller.BoxController;
 using BoxManager.Enum;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BoxManager.View
@@ -29,11 +30,13 @@ namespace BoxManager.View
 
                 _currentBox = new Model.Box();
             }
-            else
+            else if (_screenBehaviour is ScreenBehaviour.Update)
             {
                 Txt_Id.Text = _currentBox.Id.ToString();
                 Txt_Label.Text = _currentBox.Label;
                 Num_MaximumWeight.Text = _currentBox.Maximum_Weight is null ? "" : _currentBox.Maximum_Weight.ToString();
+
+                RefreshGridItems();
             }
         }
 
@@ -45,7 +48,6 @@ namespace BoxManager.View
                 _currentBox.Maximum_Weight = maximumWeight;
             else
                 _currentBox.Maximum_Weight = null;
-
         }
 
         private void Btn_Confirm_Click(object sender, EventArgs e)
@@ -54,7 +56,7 @@ namespace BoxManager.View
 
             if (_screenBehaviour is ScreenBehaviour.Insert)
                 _boxCtrl.Insert(_currentBox);
-            else
+            else if (_screenBehaviour is ScreenBehaviour.Update)
                 _boxCtrl.Change(_currentBox);
 
             this.Dispose();
@@ -63,6 +65,20 @@ namespace BoxManager.View
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void Btn_AddItem_Click(object sender, EventArgs e)
+        {
+            var itemInsert = new View.Item(_currentBox.Id, _currentBox.ToString());
+            itemInsert.ShowDialog();
+        }
+
+        private void RefreshGridItems()
+        {
+            var listOfItems = _boxCtrl.GetAllItems(_currentBox.Id);
+            if (listOfItems.Count == 0) return;
+            Dtg_Items.DataSource = listOfItems;
+            Dtg_Items.DataSource = listOfItems.Select(i => new { Id = i.Id, Description = i.Description, Weight = i.Weight }).ToList();
         }
     }
 }

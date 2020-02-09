@@ -8,7 +8,7 @@ namespace BoxManager.Repository
 {
     public class Repository<T, Id> : IRepository<T, Id> where T : BasicId
     {
-        private readonly string _connection;
+        protected readonly string _connection;
 
         public Repository()
         {
