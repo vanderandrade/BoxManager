@@ -1,13 +1,13 @@
 # BoxManager
 
 Application made to control the content of boxes and items within them. The  main objective is to apply
-some design patterns, pratice good programming skills in a project and on database, so any tips, suggestion or
+some design patterns, pratice good programming skills in a project and on database. Any tips, suggestion or
 corrections are welcome :) 
 
 ## Getting Started
 
 At the moment this application use SQL Server as database, so it's mandatory.
-The (micro)ORM Dapper it's utilized with Dapper.Contrib to create clearer an highly performatic connection with database.
+The (micro)ORM Dapper it's utilized with Dapper.Contrib to create cleaner an highly performatic connection with database.
 
 To run the application, first execute the database.sql on the SQL Server instance, then set the password on the
 connection string on app.config file. If your sql server instance isn't on localhost, then it's needed to set too.
